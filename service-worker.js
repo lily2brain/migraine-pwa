@@ -2,11 +2,14 @@ self.addEventListener('install', e => {
     e.waitUntil(
         caches.open('migraine-pwa').then(cache => {
             return cache.addAll([
-                '/',
-                '/index.html',
-                '/style.css',
-                '/app.js',
-                '/manifest.json'
+               const CACHE = 'migraine-pwa-v1';
+const ASSETS = [
+  'index.html',
+  'style.css',
+  'app.js',
+  'manifest.json'
+];
+
             ]);
         })
     );
