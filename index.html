@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registro de Toques - Enxaqueca</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="style.css">
+    <title>Registro de Enxaqueca</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Registro de Toques</h1>
-    <p>Toque no botão abaixo sempre que sentir um sintoma ou sinal de possível crise.</p>
-    <button id="touchButton">Registrar Toque</button>
-    <ul id="log"></ul>
+    <header>
+        <h1>Registro de Enxaqueca</h1>
+    </header>
+
+    <main id="app">
+        <section id="cadastro-section" class="card">
+            <h2>Cadastro</h2>
+            <label>Nome: <input type="text" id="nome"></label>
+            <label>Idade: <input type="number" id="idade"></label>
+            <button onclick="salvarCadastro()">Salvar Cadastro</button>
+        </section>
+
+        <section id="registro-section" class="card hidden">
+            <h2>Novo Registro</h2>
+            <p><strong>Data e hora:</strong> <span id="dataHora"></span></p>
+            <label>Sintomas: <textarea id="sintomas"></textarea></label>
+            <label>Possíveis alimentos: <textarea id="alimentos"></textarea></label>
+            <button onclick="salvarRegistro()">Salvar Registro</button>
+        </section>
+
+        <section id="historico-section" class="card hidden">
+            <h2>Histórico</h2>
+            <input type="date" id="filtroData" onchange="filtrarPorData()" />
+            <ul id="listaRegistros"></ul>
+        </section>
+    </main>
+
     <script src="app.js"></script>
 </body>
 </html>

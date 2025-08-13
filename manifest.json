@@ -1,9 +1,9 @@
 {
-    "name": "Registro de Toques Enxaqueca",
-    "short_name": "ToquesEnxaqueca",
+    "name": "Registro de Enxaqueca",
+    "short_name": "Enxaqueca",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
-    "description": "Protótipo para registro de toques e sintomas.",
+    "theme_color": "#6200ea",
     "icons": []
 }
